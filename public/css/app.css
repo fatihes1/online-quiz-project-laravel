@@ -1047,6 +1047,9 @@ select{
 .mb-4{
 	margin-bottom: 1rem;
 }
+.mb-2{
+	margin-bottom: 0.5rem;
+}
 .-mt-px{
 	margin-top: -1px;
 }
@@ -1058,6 +1061,9 @@ select{
 }
 .inline-flex{
 	display: inline-flex;
+}
+.table{
+	display: table;
 }
 .grid{
 	display: grid;
@@ -1232,6 +1238,9 @@ select{
 }
 .gap-1{
 	gap: 0.25rem;
+}
+.gap-2{
+	gap: 0.5rem;
 }
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-x-reverse: 0;
