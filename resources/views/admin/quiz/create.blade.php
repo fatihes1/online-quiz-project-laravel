@@ -35,7 +35,7 @@
                 }else{
                     $('#finishedInput').hide();
                 }
-            })
+            });
         </script>
     </x-slot>
 
