@@ -15,6 +15,16 @@
                     <textarea name="description" class="form-control mt-1 mb-2"  id="" rows="4">{{$quiz->description}}</textarea>
                 </div>
                 <div class="form-group">
+                    <label for="">Quiz Durumu</label>
+                    <select name="status" class="form-control" id="">
+                        <option @if($quiz->questions_count<5) disabled @endif @if ($quiz->status === 'publish') selected @endif value="publish">
+                            Aktif
+                        </option>
+                        <option @if ($quiz->status === 'passive') selected @endif value="passive">Pasif</option>
+                        <option @if ($quiz->status === 'draft') selected @endif value="draft">Taslak</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <input id="hasFinished" @if($quiz->finished_at) checked @endif type="checkbox" class="mt-2 mb-2">
                     <label for="">Bitiş Tarihi Olacak mı?</label>
                 </div>
@@ -36,7 +46,7 @@
                 }else{
                     $('#finishedInput').hide();
                 }
-            })
+            });
         </script>
     </x-slot>
 
