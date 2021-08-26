@@ -42,7 +42,7 @@
                             Soru Sayısı
                             <span class="badge bg-secondary rounded-pill">{{ $quiz->questions_count }}</span>
                         </li>
-                        @if ($quiz->result)
+                        @if ($quiz->details)
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Katılımcı Sayısı
                                 <span class="badge bg-warning rounded-pill">{{ $quiz->details['join_count'] }}</span>
@@ -56,14 +56,22 @@
                     @if(count($quiz->topTen)>0)
                     <div class="card mt-3">
                         <div class="card-body">
-                            <h5 class="card-title">Top 10</h5>
+                            <h5 class="card-title"><i class="fas fa-crown"></i> &nbsp;Top 10</h5>
                             <ul class="list-group">
                                 @foreach ($quiz->topTen as $result)
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <strong class="h4">{{$loop->iteration}}.</strong>
-                                        <img src="{{$result->user->profile_photo_url}}" alt="" class="w-8 h-8 rounded-pill">
-                                         <span @if(auth()->user()->id == $result->user_id)class="text-danger" @endif>{{$result->user->name}}</span>
-                                         <span class="badge bg-success rounded-pill">{{ $result->point }}</span>
+                                        <div class="col-md-2">
+                                            <strong class="h4">{{$loop->iteration}}.</strong>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <img src="{{$result->user->profile_photo_url}}" alt="" class="w-8 h-8 rounded-pill">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <span @if(auth()->user()->id == $result->user_id)class="text-danger" @endif>{{$result->user->name}}</span>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <span class="badge bg-success rounded-pill">{{ $result->point }}</span>
+                                         </div>
                                     </li>
                                 @endforeach
                                 
@@ -78,7 +86,11 @@
                     <div class="d-grid gap-2">
                         <a href="{{ route('quiz.join', $quiz->slug) }}" class="btn btn-info btn-sm">Cevaplarımı Görüntüle</a>
                     </div> 
-                    @else
+                    @elseif(!$quiz->finished_at)
+                    <div class="d-grid gap-2">
+                        <a href="{{ route('quiz.join', $quiz->slug) }}" class="btn btn-primary btn-sm">Quiz'e Katıl</a>
+                    </div>
+                    @elseif($quiz->finished_at>now())
                     <div class="d-grid gap-2">
                         <a href="{{ route('quiz.join', $quiz->slug) }}" class="btn btn-primary btn-sm">Quiz'e Katıl</a>
                     </div>
