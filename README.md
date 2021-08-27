@@ -9,8 +9,9 @@
 ![](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 
+[Click here](ReadmeFiles/EN_README.md) for English README.
 
-Bu proje de Laravel 8 ile online bir quiz sistemi kurulmuştur. İki adet kullanıcı tipi vardır:
+Bu projede Laravel 8 ile online bir quiz sistemi kurulmuştur. İki adet kullanıcı tipi vardır:
 - admin: Bu kullanıcı quizler oluşturabilir, düzenleyebilir, silebilir ve quizlere sorular ekleyebilir. Bununla beraber normal kullanıcı tipinin yaptığı her işlemi admin kullanıcılarda yapabilmektedir.
 - normal: Bu kullanıcılar sitede aktif olan ve son katılım tarihi geçmemiş quizlere katılabilir, kendi derecesine görebilir, doğru/yanlış yaptığı soruları inceleyip bu sorular diğer kullanıcıların yüzdelik olarak doğru cevap verilme oranını görebilir.
 ## Kurulumlar
@@ -28,9 +29,9 @@ Projenizin yerel makinenizde çalışabilmesi için PHP, Laravel, MySQL, Compose
 `git clone https://github.com/fatihes1/online-quiz-project-laravel.git`
 Proje dizinini açınız ve gerekle Node modüllerini kurmak için aşağıdaki komut satırını çalıştırın:
 `npm i`
-Composser paketleri kurmak ve güncellemek için aşağıdaki kodları komut satırına sırayla giriniz:
-`composser install`
-`composser update`
+Composer paketleri kurmak ve güncellemek için aşağıdaki kodları komut satırına sırayla giriniz:
+`composer install`
+`composer update`
 Veri tabanı oluşturma işlemi için öncelikle proje dizininde bulunan `.env` dosyasını düzenlemek üzere açınız ve `DB_PASSWORD` değişkenine MySQL şifrenizi atayın. Ardından `localhost/phpmyadmin` adresine giderek `quiz` adında bir veri tabanı oluşturun. Bu aşamadan sonra izleyebileceğiniz iki yol bulunmaktadır. 
 - Proje dizininde bulunan `SQL_FILE_HERE` klasöründeki `quiz.sql` dosyasını oluşturduğunuz veri tabanında içeri aktarabilirsiniz.
 
