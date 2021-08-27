@@ -1,63 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+﻿# Online Quiz - Laravel 8
+![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+![](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![]()
+![]()
+![]()
+![]()
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bu proje de Laravel 8 ile online bir quiz sistemi kurulmuştur. İki adet kullanıcı tipi vardır:
+- admin: Bu kullanıcı quizler oluşturabilir, düzenleyebilir, silebilir ve quizlere sorular ekleyebilir. Bununla beraber normal kullanıcı tipinin yaptığı her işlemi admin kullanıcılarda yapabilmektedir.
+- normal: Bu kullanıcılar sitede aktif olan ve son katılım tarihi geçmemiş quizlere katılabilir, kendi derecesine görebilir, doğru/yanlış yaptığı soruları inceleyip bu sorular diğer kullanıcıların yüzdelik olarak doğru cevap verilme oranını görebilir.
+## Kurulumlar
 
-## About Laravel
+Projenizin yerel makinenizde çalışabilmesi için PHP, Laravel, MySQL, Composer ve NPM kurulu olmalıdır. Aşağıda kurulum için gerekli linkler listelenmiştir:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- PHP kurulumu için: [`https://www.php.net/manual/tr/install.php`](https://www.php.net/manual/tr/install.php)
+- Laravel kurulumu için: [`https://laravel.com/docs/8.x/installation`](https://laravel.com/docs/8.x/installation)
+- MySQL kurulumu için: [`https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/`](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+- Composer kurulumu için: [`https://getcomposer.org/download/`](https://getcomposer.org/download/)
+- NPM kurulumu için: [`https://www.npmjs.com/get-npm`](https://www.npmjs.com/get-npm)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Projeyi Çalıştırma
+İlk olarak projeyi klonlayın veya dosyaları `.zip` olarak indirip dizine çıkarınız. Klonlamak için:
+`git clone https://github.com/fatihes1/online-quiz-project-laravel.git`
+Proje dizinini açınız ve gerekle Node modüllerini kurmak için aşağıdaki komut satırını çalıştırın:
+`npm i`
+Composser paketleri kurmak ve güncellemek için aşağıdaki kodları komut satırına sırayla giriniz:
+`composser install`
+`composser update`
+Veri tabanı oluşturma işlemi için öncelikle proje dizininde bulunan `.env` dosyasını düzenlemek üzere açınız ve `DB_PASSWORD` değişkenine MySQL şifrenizi atayın. Ardından `localhost/phpmyadmin` adresine giderek `quiz` adında bir veri tabanı oluşturun. Bu aşamadan sonra izleyebileceğiniz iki yol bulunmaktadır. 
+- Proje dizininde bulunan `SQL_FILE_HERE` klasöründeki `quiz.sql` dosyasını oluşturduğunuz veri tabanında içeri aktarabilirsiniz.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+veya
 
-## Learning Laravel
+- komut satırında `php artisan migrate` komutunu çalıştırabilirsiniz.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Son olarak projeyi sunucuda çalıştırmak için aşağıdaki kodu komut satırında çalıştırınız.
+`php artisan serve`
+Tüm bu işlemlerin sonrasında proje `127.0.0.1/8000` veya `localhost:8000` adresinde çalışacaktır.
+## Projede Kullanılan Mimari ve Teknolojiler
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### **MVC (Model-View-Controller) :**
+Model-View-Controller (MVC), yazılım mühendisliğinde kullanılan bir **mimari desen**dir. Kullanıcıya yüklü miktarda verinin sunulduğu karmaşık uygulamalarda veri ve gösterimin soyutlanması esasına dayanır. Böylece veriler (*İngilizce: model*) ve kullanıcı arayüzü (*İngilizce: view*), birbirini etkilemeden kontrolcü (*İngilizce: controller*) adı verilen ara bileşenle veri gösterimi, kullanıcı etkileşiminden veri erişimi ve iş mantığını çıkarma suretiyle çözümlenmektedir.
+<hr>
 
-## Laravel Sponsors
+#### **Laravel 8 :**
+Bildiğiniz üzere **PHP** dilinin içerisinde kullanıcıların işlerini kolaylaştıran ve güvenlik açısından destek sağlayan birçok **framework** bulunur. ”Web Sanatçılarının PHP Framework’ü” sloganıyla Laravel bu **framework** yapılarında ilk sıralarda gelir. Web uygulamaları geliştirilirken büyük bir kullanım oranına sahiptir.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+**Laravel**  ile projelerimizin hazırlanmasını hızlandırıp, çok zaman harcadığınız işlemleri kolayca yapabilirsiniz. Örneğin oturum yönetimi, caching ve kullanıcı doğrulama gibi işlemleri kolayca hazırlayabilirsiniz.
 
-### Premium Partners
+Açık kaynak kodlu bir framework olan  **MVC**  yapısıyla zenginleştirilmiştir.
+Daha fazla bilgi için, [tıklayınız](https://laravel.com/docs/8.x/).
+<hr>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
+#### **Laravel Jetstream**
+Laravel Jetstream, önceki sürümlerde bulunan mevcut Laravel UI iskelesini geliştirir. Oturum açma, kayıt, e-posta doğrulama, iki faktörlü kimlik doğrulama, oturum yönetimi, Laravel aracılığıyla API desteği ve ekip yönetimi dahil olmak üzere yeni projeler için bir başlangıç ​​noktası sağlar.
+Daha fazla bilgi için, [tıklayınız](https://github.com/laravel/jetstream)
 
-## Contributing
+<hr>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### **Bootstrap 5**
+Bootstrap, HTML, [CSS](https://www.argenova.com.tr/css "CSS") ve [JavaScript](https://www.argenova.com.tr/javascript "JavaScript") ile yazılmış kullanışlı, yeniden kullanılabilir kod parçalarından oluşan dev bir koleksiyondur. Ayrıca, geliştiricilerin ve tasarımcıların hızla tam olarak duyarlı web siteleri oluşturmasını sağlayan bir frameworktür.
+Daha fazla bilgi için, [tıklayınız](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+<hr>
 
-## Code of Conduct
+#### **JQuery**
+Dünyada en çok kullanılan JavaScript kütüphanesi olan JQuery'in amacı  JavaScript  dilini internet üzerinden kolayca kullanılabilmeyi sağlayan ücretsiz ve açık kaynaklı bir teknoloji sunmaktır.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+JQuery'nin sağladığı en büyük avantajlardan biri tutarlı bir şekilde bütün tarayıcılarda çalışmasıdır, bu sebeple tüm ortamlarda rahatlıkla kullanılabilme imkanı sunmaktadır.
 
-## Security Vulnerabilities
+Daha fazla bilgi için, [tıklayınız](https://jquery.com/)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<hr>
 
-## License
+#### **MySQL**
+MySQL bir ilişkisel veri tabanı olarak, 1995 yılında kullanıma sürülen en popüler açık kaynaklı ilişkisel veri tabanı yönetim sisteminden biridir.Güçlü bir veri tabanı yönetim sistemi olan MySQL veri tabanı gerektiren hemen hemen her ortamda rahatlıkla kullanılabilir. Ama özellikle web sunucularında en çok kullanılan veritabanıdır, asp, php gibi birçok web programlama dili ile kullanılabilir.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Daha fazla bilgi için, [tıklayınız](https://www.mysql.com/)
+
+## Proje Görselleri
+...
+
+
+
+## Yazar
+`Fatih Es` Beni aşağıdaki platformlardan takip edebilirsiniz.
+[![](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fatihes/)
+[![](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/fatihtech/)
+[![](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCpMnisdqsNAGzJfQBkBaOKg)
+[![](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://fatihes.medium.com/)
