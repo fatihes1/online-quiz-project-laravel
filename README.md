@@ -8,10 +8,7 @@
 ![](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 ![](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![]()
-![]()
-![]()
-![]()
+
 
 Bu proje de Laravel 8 ile online bir quiz sistemi kurulmuştur. İki adet kullanıcı tipi vardır:
 - admin: Bu kullanıcı quizler oluşturabilir, düzenleyebilir, silebilir ve quizlere sorular ekleyebilir. Bununla beraber normal kullanıcı tipinin yaptığı her işlemi admin kullanıcılarda yapabilmektedir.
@@ -91,6 +88,8 @@ Daha fazla bilgi için, [tıklayınız](https://www.mysql.com/)
 
 ## Yazar
 `Fatih Es` Beni aşağıdaki platformlardan takip edebilirsiniz.
+<br>
+
 [![](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fatihes/)
 [![](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/fatihtech/)
 [![](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCpMnisdqsNAGzJfQBkBaOKg)
