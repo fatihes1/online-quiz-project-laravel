@@ -82,9 +82,35 @@ MySQL bir ilişkisel veri tabanı olarak, 1995 yılında kullanıma sürülen en
 Daha fazla bilgi için, [tıklayınız](https://www.mysql.com/)
 
 ## Proje Görselleri
-...
+![1](https://user-images.githubusercontent.com/54971670/131108441-5e50a0dc-e5d3-41be-8449-1fa89124f66d.PNG)
 
+<hr>
 
+![2](https://user-images.githubusercontent.com/54971670/131108442-28b751cc-4174-4bee-a31a-1f97b729886f.PNG)
+
+<hr>
+
+![3](https://user-images.githubusercontent.com/54971670/131108444-df7bb40a-c3d0-4210-b2fb-54ea823d04ee.PNG)
+
+<hr>
+
+![4](https://user-images.githubusercontent.com/54971670/131108451-71023863-d9ae-456c-af42-4d97c3ca3077.PNG)
+
+<hr>
+
+![5](https://user-images.githubusercontent.com/54971670/131108454-acd78708-9527-4826-88ff-b849bb6e1be3.PNG)
+
+<hr>
+
+![6](https://user-images.githubusercontent.com/54971670/131108455-b31207c4-1c9d-4d02-a7d7-75f7c54c5121.PNG)
+
+<hr>
+
+![7](https://user-images.githubusercontent.com/54971670/131108458-c33ede6f-ad38-4e87-9932-bf1ea791f53e.PNG)
+
+<hr>
+
+![8](https://user-images.githubusercontent.com/54971670/131108459-061daf30-577a-43a1-b532-91a7c2244f06.PNG)
 
 ## Yazar
 `Fatih Es` Beni aşağıdaki platformlardan takip edebilirsiniz.
